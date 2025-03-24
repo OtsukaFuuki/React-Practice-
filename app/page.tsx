@@ -11,7 +11,7 @@ const ParentPage = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" }, // スマホでは縦並び、PCでは横並び
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "lightblue",
@@ -25,17 +25,15 @@ const ParentPage = () => {
             justifyContent: "center",
             alignItems: "center",
             gap: 2,
-            width: { xs: "100%", md: "50%" }, // スマホでは全幅、PCでは半分
+            width: { xs: "100%", md: "50%" },
           }}
         >
           {/* 赤いボックス */}
-
           <Children
             title={"親で入力するtitle01"}
             sx={{ backgroundColor: "red", p: 1, borderRadius: 1, width: "90%" }}
           />
           {/* 青いボックス */}
-
           <Children
             title={"親で入力するtitle02"}
             sx={{
@@ -47,7 +45,6 @@ const ParentPage = () => {
             }}
           />
           {/* 影付きボックス */}
-
           <Children
             title={"シャドウ付き"}
             sx={{
@@ -59,7 +56,7 @@ const ParentPage = () => {
               width: "90%",
             }}
           />
-
+          {/* 枠線ありのボックス */}
           <Children
             title={"枠線ボックス"}
             sx={{
@@ -71,7 +68,6 @@ const ParentPage = () => {
             }}
           />
           {/* 枠線ありのボックス */}
-
           <Children
             title={"角丸＋影"}
             sx={{
@@ -83,7 +79,7 @@ const ParentPage = () => {
               width: "90%",
             }}
           />
-
+          {/* グラデーションボックス */}
           <Children
             title={"グラデーション"}
             sx={{
@@ -96,7 +92,6 @@ const ParentPage = () => {
             }}
           />
           {/* 角を丸くして影を強調 */}
-
           <Children
             title={"円形ボックス"}
             sx={{
@@ -112,8 +107,7 @@ const ParentPage = () => {
             }}
           />
         </Box>
-
-        {/* 画像エリア（スクロール可能） */}
+        {/* 画像エリア　*/}
         <Box
           sx={{
             ml: { xs: 0, md: 3 },
