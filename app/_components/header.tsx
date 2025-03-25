@@ -2,73 +2,46 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
 import Image from "next/image";
-
-import { keyframes } from "@mui/system";
-
-// アニメーションの定義（上下に軽く動く）
-const bounceAnimation = keyframes`
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`;
+import { bounceAnimation, COLORS } from "../utils/theme";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#f0f0f0" }}>
+    <AppBar position="static" sx={{ backgroundColor: COLORS.secondary }}>
       <Toolbar>
-        <Typography
-          variant="body1"
-          sx={{
+        <Link
+          style={{
             flexGrow: 1,
-            textAlign: { xs: "center", md: "left" },
+            textAlign: "left",
             fontWeight: "bold",
-            color: "black",
+            color: COLORS.background,
           }}
+          href="/menu"
         >
-          日高さん用sample
-        </Typography>
+          日高さんReact
+        </Link>
         <Box
           sx={{
             position: "relative",
             display: "inline-block",
             marginLeft: 2,
             padding: "5px 10px",
-            backgroundColor: "#f9934e",
+            backgroundColor: COLORS.border,
             borderRadius: "5px",
             boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.2)",
             animation: `${bounceAnimation} 1s ease infinite`,
             cursor: "pointer",
           }}
         >
-          <Typography sx={{ color: "black", fontWeight: "bold" }}>
+          <Typography sx={{ color: "white", fontWeight: "bold" }}>
+            {" "}
             Click!!! &rarr;
           </Typography>
-
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: "-10px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: 0,
-              height: 0,
-              borderLeft: "5px solid transparent",
-              borderRight: "5px solid transparent",
-            }}
-          />
         </Box>
-
         <Box
           sx={{
             display: "flex",
             gap: 3,
-            pointerEvents: "cursor",
           }}
         >
           <a
