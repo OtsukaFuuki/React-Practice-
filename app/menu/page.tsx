@@ -3,7 +3,6 @@ import React from "react";
 import { Card, CardContent, CardActionArea, Typography } from "@mui/material";
 import Link from "next/link";
 import { COLORS } from "../utils/theme";
-import Header from "../_components/header";
 
 const courses = [
   { id: "1", title: "初めてのReact", description: "propsについて" },
@@ -12,7 +11,6 @@ const courses = [
 const MenuPage = () => {
   return (
     <>
-      <Header />
       <div
         className="min-h-screen flex flex-col items-center p-4"
         style={{ backgroundColor: COLORS.background }}
